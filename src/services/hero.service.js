@@ -66,10 +66,10 @@ const create__H__serv = (new__hero) => {
 };
 const update__H__serv = (id, hero__edit) => {
   hero__edit['id'] = id;
-  herois[herois.findIndex((hero) => hero.id === id)];
+  herois[herois.findIndex((hero) => hero.id === id)] = hero__edit;
   return hero__edit;
 };
-const delete__H__serv = () => {
+const delete__H__serv = (id) => {
   return herois.splice(
     herois.findIndex((hero) => hero.id === id),
     1

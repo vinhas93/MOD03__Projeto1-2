@@ -12,7 +12,8 @@ const find__H__by__id__cont = (req, res) => {
 // };
 
 const create__H__cont = (req, res) => {
-  res.send(hero__service.create__H__serv(req.body));
+  hero__service.create__H__serv(req.body)
+  res.send({ message: 'Um herói foi criado! O mundo nunca mais será o mesmo.' });
 };
 const update__H__cont = (req, res) => {
   res.send(hero__service.update__H__serv(+req.params.id, req.body));
