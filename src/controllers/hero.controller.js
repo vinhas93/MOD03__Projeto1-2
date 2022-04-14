@@ -7,9 +7,13 @@ const find__all__H__cont = (req, res) => {
 const find__H__by__id__cont = (req, res) => {
   res.send(hero__service.find__H__by__id__serv(+req.params.id));
 };
-// const find__H__by__class__cont = (req, res) => {
 
-// };
+
+const find__H__by__classe__cont = (req, res) => {
+  res.send(hero__service.find__H__by__classe__serv(req.params.classe));
+};
+
+
 
 const create__H__cont = (req, res) => {
   hero__service.create__H__serv(req.body)
@@ -26,7 +30,7 @@ const delete__H__cont = (req, res) => {
 module.exports = {
   find__all__H__cont,
   find__H__by__id__cont,
-  // find__H__by__class__cont,
+  find__H__by__classe__cont,
   create__H__cont,
   update__H__cont,
   delete__H__cont,

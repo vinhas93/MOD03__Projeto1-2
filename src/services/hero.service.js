@@ -2,7 +2,7 @@ const herois = [
   {
     id: 1,
     name: 'Fulana',
-    class: 'Warrior',
+    classe: 'Warrior',
     skill: 'Shout',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis.',
@@ -10,7 +10,7 @@ const herois = [
   {
     id: 2,
     name: 'Fulano',
-    class: 'Warrior',
+    classe: 'Warrior',
     skill: 'Stump',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis.',
@@ -18,7 +18,7 @@ const herois = [
   {
     id: 3,
     name: 'Sicrana',
-    class: 'Ranger',
+    classe: 'Ranger',
     skill: 'Hideout',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis.',
@@ -26,7 +26,7 @@ const herois = [
   {
     id: 4,
     name: 'Sicrano',
-    class: 'Ranger',
+    classe: 'Ranger',
     skill: 'Deceive',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis.',
@@ -34,7 +34,7 @@ const herois = [
   {
     id: 5,
     name: 'Beltrana',
-    class: 'Mage',
+    classe: 'Mage',
     skill: 'Armageddon',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis.',
@@ -42,7 +42,7 @@ const herois = [
   {
     id: 6,
     name: 'Beltrano',
-    class: 'Mage',
+    classe: 'Mage',
     skill: 'Gravity',
     story:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis.',
@@ -55,9 +55,22 @@ const find__all__H__serv = () => {
 const find__H__by__id__serv = (param__id) => {
   return herois.find((hero) => hero.id === param__id);
 };
-// const find__H__by__class__serv = () => {
 
+
+const find__H__by__classe__serv = (param__classe) => {
+   return herois.filter((hero) => hero.classe == param__classe);
+};
+
+// const find__H__by__class__serv = () => {
+//   console.log(herois.filter(classS(herois.class)))
+//   return ;
 // };
+
+// function classS(value) {
+//   return value == 'Warrior';
+// }
+
+
 
 const create__H__serv = (new__hero) => {
   new__hero.id = herois.length + 1;
@@ -79,7 +92,7 @@ const delete__H__serv = (id) => {
 module.exports = {
   find__all__H__serv,
   find__H__by__id__serv,
-  // find__H__by__class__serv,
+  find__H__by__classe__serv,
   create__H__serv,
   update__H__serv,
   delete__H__serv,
