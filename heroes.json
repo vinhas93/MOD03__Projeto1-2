@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Fulana",
+    "class": "warrior",
+    "skill": "Shout",
+    "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis."
+  },
+  {
+    "name": "Fulano",
+    "class": "warrior",
+    "skill": "Stump",
+    "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis."
+  },
+  {
+    "name": "Sicrana",
+    "class": "ranger",
+    "skill": "Hideout",
+    "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis."
+  },
+  {
+    "name": "Sicrano",
+    "class": "ranger",
+    "skill": "Deceive",
+    "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis."
+  },
+  {
+    "name": "Beltrana",
+    "class": "mage",
+    "skill": "Armageddon",
+    "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis."
+  },
+  {
+    "name": "Beltrano",
+    "class": "mage",
+    "skill": "Gravity",
+    "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis eu sapien et mollis. Nullam dapibus mollis ante a consectetur. Ut et convallis elit. Aliquam rhoncus tellus sapien, at lobortis."
+  }
+]
