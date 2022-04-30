@@ -19,6 +19,6 @@ const Hero__schema = new mongoose.Schema({
    }
 })
 
-const Hero = mongoose.model('heroes', Hero__schema)
+const Hero = mongoose.model('heroes', Hero__schema);
 
-module.exports = Hero
+module.exports = Hero;

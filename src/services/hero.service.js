@@ -14,11 +14,11 @@ const find__H__by__class__serv = async (param__class) => {
 const create__H__serv = async (new__hero) => {
   return await heroes.create(new__hero);
 };
-const update__H__serv = async (id, hero__edit) => {
-  return await heroes.findByIdAndUpdate(id, hero__edit);
+const update__H__serv = async (param__id, hero__edit) => {
+  return await heroes.findByIdAndUpdate(param__id, hero__edit);
 };
-const delete__H__serv = async (id) => {
-  return await heroes.findByIdAndDelete(id);
+const delete__H__serv = async (param__id) => {
+  return await heroes.findByIdAndDelete(param__id);
 };
 
 module.exports = {
