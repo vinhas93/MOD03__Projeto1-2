@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const connect__to__db = () => {
   mongoose
-    .connect('mongodb+srv://vinhas93:12345@api-heroes.ucdgv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    .connect(process.env.URI_DATABASE, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(() => console.log(`   MongoDb Connected`))
+    .then(() => console.log(`   MongoDb Atlas Connected`))
     .catch((error) =>
       console.log(`
       

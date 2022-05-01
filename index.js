@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const routes = require('./src/routes/hero.route');
@@ -14,5 +16,5 @@ app.use('/heroi', routes);
 
 app.listen(port, () => {
   console.log(`
-   Servidor rodando em http://localhost:${port}`);
+   Servidor rodando na porta ${port}`);
 });
