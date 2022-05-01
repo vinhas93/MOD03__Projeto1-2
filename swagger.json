@@ -1,0 +1,331 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Api salvadores do Mundo",
+    "description": "Api para CRUD de Heróis",
+    "termsOfService": "",
+    "contact": {
+      "email": "vinhas.daniel@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/heroi",
+      "description": "API de teste"
+    },
+    {
+      "url": "https//herokuapp...",
+      "description": "API de produção"
+    }
+  ],
+  "paths": {
+    "/lista-herois": {
+      "get": {
+        "summary": "Lista de todos os Heróis",
+        "description": "Rota responsável por listar todos os Heróis da API",
+        "tags": ["Heroes"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "Heroes": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "class": {
+                        "type": "string"
+                      },
+                      "skill": {
+                        "type": "string"
+                      },
+                      "story": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/unico/{id}": {
+      "get": {
+        "summary": "Busca um Herói pela seu Id",
+        "description": "Rota responsável por buscar um único Herói através do Id",
+        "tags": ["Heroes"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do Heroi para a busca",
+            "required": "true"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "Heroes": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "class": {
+                        "type": "string"
+                      },
+                      "skill": {
+                        "type": "string"
+                      },
+                      "story": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/filter/{class}": {
+      "get": {
+        "summary": "Filtra Hérois pela Classe",
+        "description": "Rota responsável por filtrar todos os heróis de uma determinada classe",
+        "tags": ["Heroes"],
+        "parameters": [
+          {
+            "name": "class",
+            "in": "path",
+            "description": "Classe de Heróis",
+            "required": "true"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "Heroes": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "class": {
+                        "type": "string"
+                      },
+                      "skill": {
+                        "type": "string"
+                      },
+                      "story": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/create": {
+      "post": {
+        "summary": "Cadastrar um novo Herói",
+        "description": "Rota responsável por cadastrar heróis",
+        "tags": ["Heroes"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "Heroes": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "class": {
+                      "type": "string"
+                    },
+                    "skill": {
+                      "type": "string"
+                    },
+                    "story": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "examples": {
+                "hero": {
+                  "value": {
+                    "name": "Bento",
+                    "class": "druida",
+                    "skill": "Calamidade",
+                    "story": "bla, bla, bla"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "Heroes": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "class": {
+                        "type": "string"
+                      },
+                      "skill": {
+                        "type": "string"
+                      },
+                      "story": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/update/{id}": {
+      "put": {
+        "summary": "Editar Herói por Id",
+        "description": "Rota responsável por atualizar Herói pelo Id",
+        "tags": ["Heroes"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id da do Herói para a busca",
+            "required": "true"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "Heroes": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "class": {
+                      "type": "string"
+                    },
+                    "skill": {
+                      "type": "string"
+                    },
+                    "story": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "examples": {
+                "hero": {
+                  "value": {
+                    "name": "Bento 2.0",
+                    "class": "druida",
+                    "skill": "Calamidade",
+                    "story": "bla, bla, bla"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "Heroes": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "class": {
+                        "type": "string"
+                      },
+                      "skill": {
+                        "type": "string"
+                      },
+                      "story": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delete/{id}": {
+      "delete": {
+        "summary": "Apagar um Herói pelo ID",
+        "description": "Rota responsável por apagar um Herói pelo Id",
+        "tags": ["Heroes"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id da paleta para deleção",
+            "required": "true"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
