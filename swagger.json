@@ -11,12 +11,12 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000/heroi",
-      "description": "API de teste"
+      "url": "https://api-heroes-blue-m03.onrender.com/heroi",
+      "description": "API de produção"
     },
     {
-      "url": "https//herokuapp...",
-      "description": "API de produção"
+      "url": "http://localhost:3000/heroi",
+      "description": "API de teste"
     }
   ],
   "paths": {
